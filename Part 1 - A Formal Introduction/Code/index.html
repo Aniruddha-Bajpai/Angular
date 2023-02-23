@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- Adding Angular -->
+  <!-- 
+    ng-app tells the browser that the div is the owner of angular application
+    ng-model bind the values of input field to application variable name 
+    ng-bind the content of the p element to application variable name
+
+   -->
+  <!--
+  <div ng-app="">
+    <p>Name : <input type="text" ng-model="name"></p>
+    <p ng-bind="name"></p>
+  </div>
+
+  -->
+  <!-- 
+  <div ng-app="" ng-init="firstName='Aniruddh'">
+    <p>The name is <span ng-bind="firstName"></span></p>
+  </div> 
+  You can use data-ng- inorder to make you HTML page valid instead of ng-
+-->
+  <!-- Angular JS expression binds the data the same way as ng-bind- -->
+  <div ng-app="myApp" ng-controller='myCTRL'>
+    <!-- <p>The name is <span data-ng-bind="firstName"></span></p>
+    <h1>Expressions</h1>
+    <p>My firstExpression : {{10+1}}</p> -->
+    FirstName : <input type="text" ng-model="firstName">
+    LastName : <input type="text" ng-model="lastName">
+    <br>
+    FullName : {{firstName + " " + lastName}}
+  </div>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCTRL', function ($scope) {
+      $scope.firstName = "Aniruddha";
+      $scope.lastName = "bajpai";
+    });
+  </script>
+</body>
+
+</html>
