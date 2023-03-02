@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+
+<body>
+  <div ng-app='root' ng-controller='CTRL'>
+    <div ng-repeat="x in person"> {{x + " " + fullname() }} </div>
+
+  </div>
+  <script>
+    var app = angular.module('root', []);
+    app.controller('CTRL', function ($scope) {
+      $scope.yourName = 'Aniruddha';
+      $scope.person = ['a', 'b', 'c'];
+      $scope.fullname = function () {
+        return "Aniruddha bajpai";
+      };
+    });
+    app.directive('applicationStatus', function () {
+      return {
+        template: "<h1>Application Status</h1>",
+        restrict: "E"
+      };
+    });
+  </script>
+</body>
+
+</html>

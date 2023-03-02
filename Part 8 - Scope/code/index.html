@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+
+<body>
+  <div ng-app='root'>
+    {{name}}
+    <div ng-controller="myctrl">
+      {{name}}
+    </div>
+    <div ng-repeat="x in person"> {{x + " " + fullname() }} </div>
+    {{name}}
+  </div>
+  <script>
+    var app = angular.module('root', []);
+    app.run(function ($rootScope) {
+      $rootScope.name = "Main Application";
+    });
+    app.controller('myctrl', function ($scope) {
+      $scope.name = 'controller';
+    });
+  </script>
+</body>
+
+</html>

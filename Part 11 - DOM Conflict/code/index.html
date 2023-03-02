@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-disabled="a">Click here</button>
+    <input type='checkbox' ng-model="a" />
+    <div ng-show="a">Show</div>
+    <div ng-hide="a">Hide</div>
+  </div>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+      $scope.a = false;
+    });
+  </script>
+
+</body>
+
+</html>

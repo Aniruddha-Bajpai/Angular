@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-click="myfunc()">Click here</button>
+    <ul ng-show="expand">
+      <li ng-repeat="x in gifts">{{$index}} {{x}}</li>
+    </ul>
+  </div>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+      $scope.gifts = ['car', 'bike', 'bicycle'];
+      $scope.myfunc = function () {
+        $scope.expand = !$scope.expand;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

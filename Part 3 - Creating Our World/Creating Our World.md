@@ -14,3 +14,4 @@ Controller always belong to a module
 
 Here the, myapp parameter refers to an HTML element in which the application will run.
 Now you can add controllers, directives, filters, and more, to your angular application.
+Also, [] used to define the dependent module, without specifying [], we are not actually creating a new module but retrieving an existing module.
