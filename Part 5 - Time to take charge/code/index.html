@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <div ng-app="main-app" ng-controller='myCtrl'>
+    Name: <input type="text" ng-model="name">
+    About me: <textarea rows="10" ng-model="aboutMe"></textarea>
+    <p>{{name}}</p>
+    <p>{{aboutMe!='Write here' ? aboutMe : 'About you'}}</p>
+  </div> -->
+
+
+  <!-- Validate User Input -->
+  <!-- If the property in the ng-model attribute does not exist, angularJS will create one for you -->
+  <!-- <form ng-app="main-app" action="" name="myForm" ng-controller="myCtrl">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-email address</span>
+  </form> -->
+  <form action="" ng-app="" ng-init="myText= 'post@sasa.com'" name="myForm">
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <h1>Status</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+  </form>
+  <script>
+    // var app = angular.module('main-app', []);
+    // app.controller('myCtrl', function ($scope) {
+    // });
+
+  </script>
+
+
+</body>
+
+</html>

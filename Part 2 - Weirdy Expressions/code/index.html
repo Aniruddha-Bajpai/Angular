@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Weirdy Expressions</title>
+</head>
+
+<body>
+  <!-- <div ng-app='' ng-init="myCol = 'green'">
+    <p style="background-color:{{myCol}}" ng-bind="myCol"></p>
+  </div> -->
+  <!-- <div ng-app="" ng-init="quantity=1;cost=5">
+
+    <p>Total in dollar: {{ quantity * cost }}</p>
+
+  </div> -->
+  <!-- <div ng-app="" ng-init="firstName='Anir';lastName='Baj'">
+
+    <p>The name is {{ firstName + " " + lastName }}</p>
+
+  </div> -->
+  <!-- <div ng-app="" ng-init="person = {firstName : 'John', lastName: 'Bajpai'}">
+
+    <p>The name is {{ person.firstName + " " + person.lastName }}</p>
+
+  </div> -->
+  <div ng-app="" ng-init="points=[1,15,112,2,12]">
+    <!-- <p>{{points.toString().split(',')}}</p> -->
+    <p ng-bind="points[2]"></p>
+  </div>
+</body>
+
+</html>
